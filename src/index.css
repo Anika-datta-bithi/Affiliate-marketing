@@ -1,1 +1,11 @@
+/* 1. Combine both Inter and Poppins into one single Google Font import at the absolute top */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;800&display=swap');
+
+/* 2. Clean up your Tailwind import (just one is needed!) */
 @import "tailwindcss";
+
+/* 3. Register both fonts in Tailwind v4's theme config */
+@theme {
+  --font-sans: 'Inter', sans-serif;       /* Default text/body font */
+  --font-display: 'Poppins', sans-serif;  /* Custom heading/display font */
+}
